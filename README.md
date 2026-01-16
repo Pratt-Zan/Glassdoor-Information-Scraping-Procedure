@@ -37,6 +37,8 @@ We can learn from the structure that the main running logic shall be seperate in
 
 There should be 6 .ipynb files, which 5 of them (except Data_Full_Filter) is for the running procedure to generate the final outcome, and the exception is to generate the data from the initial dataset. The excecution order can be seen in notice above.
 
+Please be awared that the empty file is not showed here since the Github restriction, the full structure should be found in the Onedrive link.
+
 --------------------------
 
 ## 🛠 Environment Setup
