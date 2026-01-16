@@ -81,9 +81,30 @@ Please also be aware that all the test code is done in Visual Studio Code, and w
 
 This section and following shall be the explanation for each step and their notices, statr from step 1.
 
+In the code of step 1, both codes regarding different datasets share the same scraping logic. We will use the undetected chrome driver to generate the searching base on the Bing engine, since this will not meet the block as Chrome does. We will downlaod the page source in the first page to see whether there is a suitable url base on the "glassdoor". To be more specific, we will find the url containing "Overview" as the first choice and then "Reviews" as the second. This is to try get urls as much as we can, since we have found that the revierw page can be transfered to the overview page under certain rules, which will be seen in step 2.
 
+Besides there is one thing needing attention, which is that the result in the Bing search is encrypted, so the following python code for search is in need. However, it is not always happening but do exist, so when learning the code, the second judgement of whether url has "bing" in its line is crucial, which means that the code should not be changed.
 
+``` Python
+u_param = parse_qs(parsed_url.query).get('u', [None])[0]
+if not u_param:
+    continue
+try:
+    b64_str = u_param[2:]
+    padding = len(b64_str) % 4
+    if padding:
+        b64_str += "=" * (4 - padding)
+    decoded_bytes = base64.urlsafe_b64decode(b64_str)
+    decoded_url = decoded_bytes.decode('utf-8')
+```
 
+The final output in this step will be a json file stored in the belonging folder, containing the company name and the corresponding url.
+
+-----------------------------------------------------------
+
+## Section 2 Notice
+
+In this step
 
 
 
