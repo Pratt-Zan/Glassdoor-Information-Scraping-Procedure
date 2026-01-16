@@ -40,7 +40,7 @@ There should be 6 .ipynb files, which 5 of them (except Data_Full_Filter) is for
 ## Environment Settings
 
 In this section we will introduce the environment settings you may need when running the code.
-```
+``` Python
 import json
 import time
 import re
@@ -104,9 +104,11 @@ The final output in this step will be a json file stored in the belonging folder
 
 ## Section 2 Notice
 
-In this step
+In this step, we deal with the code to transform the url belongs to review page to overview page. We have found that the url share a basic structure and a high correlation between the review page and the ioverview page, by just chaging the suffix and adding several words can we make the transformation clear. This code is not difficult, and the result will also be in json style and be stored in the folder: Page_Url_Formatting_xxx. Here by notice, the name of jsons should be the same in order to check, but just stored in different places to show the difference between them. There is no need to make long names for each json which has been achieved by their parent folders.
 
+-----------------------------------------------------------
 
+## Section 2 Notice
 
 
 
