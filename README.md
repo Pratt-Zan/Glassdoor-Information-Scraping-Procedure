@@ -70,11 +70,12 @@ warnings.filterwarnings('ignore', category=pd.errors.DtypeWarning)
 ```
 
 Please check if you have all listed libraries in your Python environment installed, for the clear running. If not, please search in Chrome and use "pip install" to download. This procedure is quite easy and then I will leave it.
+
 Please also be aware that all the test code is done in Visual Studio Code, and with Jupyter Notebook Kernal, and Python version is 3.11.5 (Please check the version so that Jupyter can support).
 
 -----------------------------------------------------------
 
-
+This section and following shall be the explanation for each step and their notices, statr from step 1.
 
 
 
