@@ -37,6 +37,8 @@ There should be 6 .ipynb files, which 5 of them (except Data_Full_Filter) is for
 
 --------------------------
 
+## Environment Settings
+
 In this section we will introduce the environment settings you may need when running the code.
 ```
 import json
@@ -74,6 +76,8 @@ Please check if you have all listed libraries in your Python environment install
 Please also be aware that all the test code is done in Visual Studio Code, and with Jupyter Notebook Kernal, and Python version is 3.11.5 (Please check the version so that Jupyter can support).
 
 -----------------------------------------------------------
+
+## Section 1 Notice
 
 This section and following shall be the explanation for each step and their notices, statr from step 1.
 
