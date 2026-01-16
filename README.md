@@ -83,7 +83,7 @@ This section and following shall be the explanation for each step and their noti
 
 In the code of step 1, both codes regarding different datasets share the same scraping logic. We will use the undetected chrome driver to generate the searching base on the Bing engine, since this will not meet the block as Chrome does. We will downlaod the page source in the first page to see whether there is a suitable url base on the "glassdoor". To be more specific, we will find the url containing "Overview" as the first choice and then "Reviews" as the second. This is to try get urls as much as we can, since we have found that the revierw page can be transfered to the overview page under certain rules, which will be seen in step 2.
 
-Besides there is one thing needing attention, which is that the result in the Bing search is encrypted, so the following python code for search is in need. However, it is not always happening but do exist, so when learning the code, the second judgement of whether url has "bing" in its line is crucial, which means that the code should not be changed.
+Besides there is one thing needing attention, which is that the result in the Bing search is encrypted, so the following python code for search is in need. However, it is not always happening but do exist, so when learning the code, the second judgement of whether url has "bing" in its line is crucial, which means that the code should not be changed. Also, since the result may change every time running, here we added a retry system to fully check the ability for the urls. The retry is set to be 5, and too small will lose its effectiveness, while to large will reduce the efficiency of the code, which make the running time to long.
 
 ``` Python
 u_param = parse_qs(parsed_url.query).get('u', [None])[0]
@@ -108,8 +108,46 @@ In this step, we deal with the code to transform the url belongs to review page 
 
 -----------------------------------------------------------
 
-## Section 2 Notice
+## Section 3 Notice
 
+In this step we will use the urls generated in the last step to find the source in the overview page. By the help of Beautifulsoup library, we can store the page source and locate the text we want by the followingh codes
 
+``` Python
+pagesource = driver.page_source
+soup = BeautifulSoup(pagesource, 'html.parser')
+details_list = soup.find('ul', attrs={'data-test': 'companyDetails'})
+if details_list:
+    for j, li in enumerate(details_list.find_all('li'), 1):
+        text = li.get_text(strip=True)
+        if text:
+            item[f'info-{j}'] = text
+```
 
+It is clear that we just add few information lines to the former json. Since the information for different company varies, the numnber we add is not certain. 
 
+Besides this, the connection to the glassdoor is needing a special way. When using the code, please read the markdone part in the code to follow the instrcution as below:
+
+``` 
+"1. close all Chrome drivers"
+"2. Open (Win+R，输入cmd)，copy and paste to run the command:"
+"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe" --remote-debugging-port=9222 --user-data-dir="C:\\chrome_temp"
+Then use the connection function to connect the code, and Please login Glassdoor by your account first before the scraping starts.
+```
+
+This step must be done to ensure the block won't happen in Glassdoor website. After running the code, we can see that the json data is stored in the Page_Scrape_Check_xxx folders.
+
+-----------------------------------------------------------
+
+## Section 4 Notice
+
+In this section we shall here use the former json to done the formatting to change the info-x to the specified item. They includes "website" "" "location" "employees" "type" "revenue" "industry", here we can find that only "location" and "industry" shall be hard to position, while else can be found based on the key strings they have, such as "com." "www." for website, and "employee" "Type:" " Revenue:" for "employees" "type" "revenue". To loacate the remaining, we found some other ways.
+ 
+For "location" we find that it only appear in the first 3 info lines, and also contain a comma，and for "industry" we found it must appear in the last 2 info line. After we filtered out the keys for those in other line, the remaining line in the last 2 position must be the line for "industry". Then after the formatting, the final outcome will still be stored in a json file, and it can be final result for our need.
+
+-----------------------------------------------------------
+
+## The last tip
+
+In the running code, I found that the total time for the running should at least be 500+ (300+ for step 1 and 200+ for step 3) hours. So the running should be seperate for several parts in different ends. Also, the idea is done in Windows for sure since we need the powershell to run the debugger browser in step 3. And lastly, I do recommend running 1000 company one time at one end, and store the json name as urls-1.x.json / urls.2.x.json to avoid any traceback that made the progame to kill running.
+
+PRATT ZAN, 2026 Jan 16
