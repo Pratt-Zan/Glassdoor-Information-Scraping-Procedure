@@ -45,7 +45,7 @@ There should be 6 .ipynb files, which 5 of them (except Data_Full_Filter) is for
 - Python Version: 3.11.5 (Optimized for Jupyter Kernel compatibility).
 - OS: Windows (Required for Step 3 remote debugger functionality).
 - IDE: Visual Studio Code with Jupyter extension.
-- 
+
 In this section we will introduce the environment settings you may need when running the code.
 ``` Python
 import json
