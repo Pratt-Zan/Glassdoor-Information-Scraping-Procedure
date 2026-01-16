@@ -38,5 +38,50 @@ There should be 6 .ipynb files, which 5 of them (except Data_Full_Filter) is for
 --------------------------
 
 In this section we will introduce the environment settings you may need when running the code.
+```
+import json
+import time
+import re
+import os
+import base64
+import warnings
+import glob
+from urllib.parse import urlparse, parse_qs, urllib.parse
+
+import pandas as pd
+from tqdm import tqdm
+from bs4 import BeautifulSoup
+
+# Selenium-related
+import undetected_chromedriver as uc
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+# WebDriver-manage
+from webdriver_manager.chrome import ChromeDriverManager
+
+# filter-warnings
+warnings.filterwarnings('ignore', category=pd.errors.DtypeWarning)
+```
+
+Please check if you have all listed libraries in your Python environment installed, for the clear running. If not, please search in Chrome and use "pip install" to download. This procedure is quite easy and then I will leave it.
+Please also be aware that all the test code is done in Visual Studio Code, and with Jupyter Notebook Kernal, and Python version is 3.11.5 (Please check the version so that Jupyter can support).
+
+-----------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
 
 
