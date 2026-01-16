@@ -1,11 +1,13 @@
-# Glassdoor-Information-Scraping-Procedure
-This is the code and data structure for other ends to done the overview scraping, please read the instruction carefully before you actually need to done the procedure.
+# 🚀 Glassdoor Information Scraping Procedure
+This documentation outlines the automated workflow for scraping company overview data from Glassdoor. This project utilizes a multi-step process to bypass anti-scraping measures and ensure data accuracy across two primary datasets (EP and Transfer).
+
+Note: The full datasets are not hosted on GitHub due to size constraints. To replicate this study, please contact the author via Dropbox for access.
 
 --------------------------
 
-The files shall follow the listed order
+## 📁 Project Structure
 
-## 📁 File Structure
+The project is organized into modular directories based on the execution stage:
 
 ```
 my-project/
@@ -37,7 +39,7 @@ There should be 6 .ipynb files, which 5 of them (except Data_Full_Filter) is for
 
 --------------------------
 
-## Environment Settings
+## 🛠 Environment Setup
 
 In this section we will introduce the environment settings you may need when running the code.
 ``` Python
@@ -71,8 +73,10 @@ from webdriver_manager.chrome import ChromeDriverManager
 warnings.filterwarnings('ignore', category=pd.errors.DtypeWarning)
 ```
 
-Please check if you have all listed libraries in your Python environment installed, for the clear running. If not, please search in Chrome and use "pip install" to download. This procedure is quite easy and then I will leave it.
-
+Please check if you have all listed libraries in your Python environment installed, for the clear running. If not, please search in Chrome and use "pip install" to download. 
+``` bash
+pip install pandas tqdm beautifulsoup4 selenium undetected-chromedriver webdriver-manager
+```
 Please also be aware that all the test code is done in Visual Studio Code, and with Jupyter Notebook Kernal, and Python version is 3.11.5 (Please check the version so that Jupyter can support).
 
 -----------------------------------------------------------
