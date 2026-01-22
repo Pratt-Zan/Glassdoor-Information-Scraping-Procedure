@@ -30,7 +30,7 @@ my-project/
 │   └── 📜 scrap_url_Method_2_full.ipynb/     # Step 1 for data in  EP - Scrap Urls by company names
 ├── 📜 filtered_companies_full_Transfer.csv      
 ├── 📜 Data_Full_Filter.ipynb          
-└── 📜 README.md 
+└── 📜 README.md                              # Unique file in Github
 ```
 
 We can learn from the structure that the main running logic shall be seperate into different files, and there are 2 dataset for you to deal with. The Method 1 and Method 2 are correlated with 2 dataset given in the Basic Data loaction. Please be aware that full data is not given in the github, and if you need to replicate the code, please contact the writer to download throgh Dropbox.
