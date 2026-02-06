@@ -157,7 +157,7 @@ In this section we shall here use the former json to done the formatting to chan
  
 For "location" we find that it only appear in the first 3 info lines, and also contain a comma，and for "industry" we found it must appear in the last 2 info line. After we filtered out the keys for those in other line, the remaining line in the last 2 position must be the line for "industry". Then after the formatting, the final outcome will still be stored in a json file, and it can be final result for our need.
 
-- - - - - - - - - - - - - - - - - - - - - - 
+-----------------------------------------------------------
 
 ## The last tip
 
@@ -165,7 +165,7 @@ In the running code, I found that the total time for the running should at least
 
 PRATT ZAN, 2026 Feb 06
 
-🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
 
-测试
+
 
