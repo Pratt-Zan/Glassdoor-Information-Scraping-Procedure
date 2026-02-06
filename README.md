@@ -153,7 +153,7 @@ This step must be done to ensure the block won't happen in Glassdoor website. Af
 
 ## Step 4 Notice
 
-In this section we shall here use the former json to done the formatting to change the info-x to the specified item. They includes "website" "" "location" "employees" "type" "revenue" "industry", here we can find that only "location" and "industry" shall be hard to position, while else can be found based on the key strings they have, such as "com." "www." for website, and "employee" "Type:" " Revenue:" for "employees" "type" "revenue". To loacate the remaining, we found some other ways.
+In this section we shall here use the former json to done the formatting to change the info-x to the specified item. They includes "website" "" "location" "employees" "type" "revenue" "industry", here we can find that only "location" and "industry" shall be hard to position, while else can be found based on the key strings they have, such as ".com" "www." for website, and "employee" "Type:" " Revenue:" for "employees" "type" "revenue". To loacate the remaining, we found some other ways.
  
 For "location" we find that it only appear in the first 3 info lines, and also contain a comma，and for "industry" we found it must appear in the last 2 info line. After we filtered out the keys for those in other line, the remaining line in the last 2 position must be the line for "industry". Then after the formatting, the final outcome will still be stored in a json file, and it can be final result for our need. The results will be stored in the Page_Scrape_Formatting_xxx folder accordingly.
 
@@ -322,7 +322,7 @@ Then use the connection function to connect the code, and Please login Glassdoor
 
 ## 步骤4说明
 
-在本节中，我们将使用之前的JSON完成格式化，将info-x更改为指定项。它们包括"website" "" "location" "employees" "type" "revenue" "industry"，这里我们可以发现只有"location"和"industry"难以定位，而其他项可以根据它们具有的关键字符串找到，例如"com." "www." 用于"website"，"employee" "Type:" " Revenue:"用于"employees" "type" "revenue"。为了定位剩余的项，我们找到了其他方法。
+在本节中，我们将使用之前的JSON完成格式化，将info-x更改为指定项。它们包括"website" "" "location" "employees" "type" "revenue" "industry"，这里我们可以发现只有"location"和"industry"难以定位，而其他项可以根据它们具有的关键字符串找到，例如".com" "www." 用于"website"，"employee" "Type:" " Revenue:"用于"employees" "type" "revenue"。为了定位剩余的项，我们找到了其他方法。
 
 对于"location"，我们发现它只出现在前3个信息行中，并且包含逗号；对于"industry"，我们发现它必须出现在最后2个信息行中。过滤掉其他行中的这些项后，最后2个位置中剩余的行必是"industry"行。格式化后，最终结果仍将存储在JSON文件中，这可以作为我们需要的最终结果。结果会相应的存储在Page_Scrape_Formatting_xxx文件夹之中。
 
