@@ -37,7 +37,7 @@ We can learn from the structure that the main running logic shall be seperate in
 
 There should be 6 .ipynb files, which 5 of them (except Data_Full_Filter) is for the running procedure to generate the final outcome, and the exception is to generate the data from the initial dataset。 Since we have already generated the filtered_companies_full_Transfer.csv dataset, we will not execute this code here. The excecution order can be seen in notice above, and we will also make guideline blow using step notice as titles.
 
-Please be awared that the empty file is not showed in this link here since the Github restriction, but it should be established for the running environmenr. The full structure should be found in the Onedrive link.
+Please be awared that the empty file is not showed in this link here since the Github restriction, but it should be established for the running environment(please add these files after downloading the full project). The full structure should be found in the Onedrive link.
 
 --------------------------
 
@@ -205,7 +205,7 @@ my-project/
 
 此处总共应该有6个.ipynb文件，其中5个（除了Data_Full_Filter）是用于生成最终结果的运行过程，而Data_Full_Filter是从初始数据集生成数据，由于我们已经生成好了filtered_companies_full_Transfer.csv数据故这里我们不会执行这个代码。执行顺序可以在上面的注释中看到，我们还将使用步骤说明作为标题在下方提供指南。
 
-请注意，空文件在此处未显示，因为GitHub限制，但应为运行环境建立。完整结构应在OneDrive链接中找到。
+请注意，空文件在此处未显示，因为GitHub限制，但应为运行环境建立完整的架构（需要下载后手动添加）。完整结构应在OneDrive链接中找到。
 
 --------------------------
 
